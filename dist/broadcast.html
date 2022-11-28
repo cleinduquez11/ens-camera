@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Broadcaster</title>
+    <meta charset="UTF-8" />
+    
+  </head>
+  <body>
+    <section class="select">
+      <label for="audioSource" hidden>Audio source: </label>
+      <select id="audioSource" hidden></select>
+    </section>
+
+    <section class="select">
+      <label for="videoSource" hidden>Video source: </label>
+      <select id="videoSource" hidden></select>
+    </section>
+
+    <video playsinline autoplay muted></video>
+    <video id="recorded" playsinline loop></video>
+    <div>
+      Recording format: <select id="codecPreferences" disabled></select>
+  </div>
+    <div class="vertical-center">
+      <button id="recordButton1">Start Recording</button>
+      <button id="playButton1" disabled >Play</button>
+      <button id="downloadButton1" disabled >Download</button>
+      <button id="upload1" disabled >Upload Video</button>
+  </div>
+</div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/broadcast.js"></script>
+    <script src="bundle.js"></script>
+    
+  </body>
+</html>
